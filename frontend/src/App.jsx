@@ -3,24 +3,25 @@
 //import viteLogo from '/vite.svg'
 //import './App.css'
 
-import { Box } from "@chakra-ui/react"
-import { Router, Route } from "react-router-dom"
-import { Button } from "@chakra-ui/react/button"
+import { Box, Button } from "@chakra-ui/react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import CreatePage from "./pages/CreatePage"
-import NavBar from "./components/Navbar"
+import NavBar from "./components/NavBar"
 
 function App() {
 
   return (
-    <Box minH={"100vh"}>
-      <NavBar />
-      <Router>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/create" element={<CreatePage />} />
-      </Router>
-      <Button colorScheme="blue">Button</Button>
-    </Box>
+    <Router>
+      <Box minH={"100vh"}>
+        <NavBar />
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/create" element={<CreatePage />} />
+        </Routes>
+        <Button colorScheme="blue">Button</Button>
+      </Box>
+    </Router>
   )
 }
 
