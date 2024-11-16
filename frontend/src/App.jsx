@@ -19,7 +19,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/create" element={<CreatePage />} />
         </Routes>
-        <Button colorScheme="blue">Button</Button>
+       {/* <Button colorScheme="blue">Button</Button>*/}
       </Box>
     </Router>
   )
